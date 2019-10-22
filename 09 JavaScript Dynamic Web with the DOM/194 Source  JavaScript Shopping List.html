@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>194 Source  JavaScript Shopping List</title>
+</head>
+<body>
+<div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <p>&lt;html&gt;</p>
+
+<p>&lt;head&gt;<br>    &lt;title&gt;Complete JavaScript Course&lt;/title&gt;<br>    &lt;style&gt;</p>
+
+<p>    &lt;/style&gt;<br>&lt;/head&gt;</p>
+
+<p>&lt;body&gt;<br>    &lt;div id="message"&gt;Complete JavaScript Course&lt;/div&gt;<br>    &lt;div&gt;<br>        &lt;input type="text" id="addItem"&gt;<br>        &lt;input type="button" id="addNew" value="Add to List"&gt; &lt;/div&gt;<br>    &lt;div id="output"&gt;<br>        &lt;h1&gt;Shopping List&lt;/h1&gt;<br>        &lt;ol id="sList"&gt; &lt;/ol&gt;<br>    &lt;/div&gt;<br>    &lt;script&gt;<br>        // click add new<br>        // get the value of the new item<br>        // create new li<br>        // add text to li<br>        // append li to the ol<br>        document.getElementById('addNew').onclick = function () {<br>            addOne();<br>        }</p>
+
+<p>        function addOne() {<br>            var a = document.getElementById('addItem').value;<br>            var li = document.createElement('li');<br>            li.appendChild(document.createTextNode(a));<br>            document.getElementById('sList').appendChild(li);<br>        }<br>    &lt;/script&gt;<br>&lt;/body&gt;</p>
+
+<p>&lt;/html&gt;</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

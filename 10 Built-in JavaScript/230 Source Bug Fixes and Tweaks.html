@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>230 Source Bug Fixes and Tweaks</title>
+</head>
+<body>
+<div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <p>&lt;html&gt;</p>
+
+<p>&lt;head&gt;<br>    &lt;title&gt;Complete JavaScript Course&lt;/title&gt;<br>    &lt;style&gt;</p>
+
+<p>    &lt;/style&gt;<br>&lt;/head&gt;</p>
+
+<p>&lt;body&gt;<br>    &lt;div id="message"&gt;Complete JavaScript Course&lt;/div&gt;<br>    &lt;script&gt;<br>        function testMe() {<br>            var x = 500;<br>            try {<br>                if (x &gt; 100) {<br>                    throw "Yes its greater than 100";<br>                }<br>                if (x &lt; 100) {<br>                    throw "Oh no its less than 100";<br>                }<br>                concole(x);<br>            }<br>            catch (e) {<br>                document.getElementById('message').innerHTML = e.message;<br>                console.dir(e);<br>            }<br>        }<br>    &lt;/script&gt;<br>&lt;/body&gt;</p>
+
+<p>&lt;/html&gt;</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>168 Source Get Elements Id and TagName</title>
+</head>
+<body>
+<div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <p>&lt;html&gt;</p>
+
+<p>&lt;head&gt;<br>    &lt;style&gt;</p>
+
+<p>    &lt;/style&gt;<br>&lt;/head&gt;</p>
+
+<p>&lt;body&gt;<br>    &lt;div id="output"&gt;&lt;/div&gt;<br>    &lt;form name="myForm"&gt;<br>        &lt;input type="url" id="url" name="url"&gt;<br>        &lt;input type="text" id="first" name="first"&gt;<br>        &lt;input type="text" id="last" name="last"&gt;<br>        &lt;textarea name="output1"&gt;&lt;/textarea&gt;<br>        &lt;div id="another"&gt;Parent<br>            &lt;div id="one"&gt;Test 1&lt;/div&gt;<br>            &lt;div id="two"&gt;Test 2&lt;/div&gt;<br>            &lt;div id="three"&gt;Test 3&lt;/div&gt;<br>            &lt;div id="four"&gt;Test 4&lt;/div&gt;<br>            &lt;div id="five"&gt;Test 5&lt;/div&gt;<br>            &lt;div id="six"&gt;Test 6&lt;/div&gt;<br>        &lt;/div&gt;<br>        &lt;input id="btn1" type="button" onclick="myFun1()" value="Click Here"&gt; &lt;/form&gt;<br>    &lt;script&gt;<br>        var output = document.getElementById('output');<br>        var divList = document.getElementsByTagName('div');<br>        divList[7].innerHTML = "Welcome to my website";</p>
+
+<p>        function myFun1() {<br>            var html = "&lt;h1&gt;Div list&lt;/h1&gt;";<br>            for (var x = 1; x &lt; divList.length; x++) {<br>                if (!divList[x].firstElementChild) {<br>                    html += divList[x].innerText + "&lt;br&gt;";<br>                }<br>            }<br>            divList[0].innerHTML = html;<br>        }<br>    &lt;/script&gt;<br>&lt;/body&gt;</p>
+
+<p>&lt;/html&gt;</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

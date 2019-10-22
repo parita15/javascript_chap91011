@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>206 Source Dynamic List Editor</title>
+</head>
+<body>
+<div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <p>&lt;html&gt;</p>
+
+<p>&lt;head&gt;<br>    &lt;title&gt;Complete JavaScript Course&lt;/title&gt;<br>    &lt;style&gt;<br>        td {<br>            border: 1px solid #ddd;<br>            padding: 10px;<br>        }<br>        <br>        td:first-child {<br>            width: 300px;<br>        }<br>    &lt;/style&gt;<br>&lt;/head&gt;</p>
+
+<p>&lt;body&gt;<br>    &lt;div id="message"&gt;Complete JavaScript Course&lt;/div&gt;<br>    &lt;div&gt;<br>        &lt;input type="text" id="addFriend"&gt;<br>        &lt;input type="button" id="addNew" value="Add Friend"&gt; &lt;/div&gt;<br>    &lt;div class="output"&gt;&lt;/div&gt;<br>    &lt;script&gt;<br>        var myArray = ["Laurence", "Mike", "John", "Larry", "Kim", "Joanne", "Lisa", "Janet", "Jane"];<br>        window.onload = build;<br>        document.getElementById('addNew').addEventListener('click', addN, false);</p>
+
+<p>        function addN() {<br>            var a = document.getElementById('addFriend').value;<br>            myArray.push(a);<br>            build();<br>        }</p>
+
+<p>        function build() {<br>            var html = "&lt;h1&gt;Click Table&lt;/h1&gt;&lt;table&gt;";<br>            for (var x = 0; x &lt; myArray.length; x++) {<br>                html += '&lt;tr id="id' + x + '" data-row="' + x + '"&gt;&lt;td&gt;' + myArray[x] + '&lt;/td&gt;&lt;td&gt;&lt;a href="#" data-action="delete"&gt;Del&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href="#" data-action="edit"&gt;Edit&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;';<br>            }<br>            document.querySelector('.output').innerHTML = html;<br>            var dad = document.querySelectorAll('[data-action="delete"]');<br>            for (var x = 0; x &lt; dad.length; x++) {<br>                dad[x].addEventListener('click', function () {<br>                    event.preventDefault();<br>                    var iValue = this.closest('[data-row]').getAttribute('data-row');<br>                    var r = myArray.splice(iValue, 1);<br>                    build();<br>                    console.log(r);<br>                })<br>            }<br>            var dae = document.querySelectorAll('[data-action="edit"]');<br>            for (var x = 0; x &lt; dae.length; x++) {<br>                dae[x].addEventListener('click', function () {<br>                    event.preventDefault();<br>                    var row = this.closest('[data-row]');<br>                    var rid = row.getAttribute('data-row');<br>                    row.style.backgroundColor = "Yellow";<br>                    var td = row.firstElementChild;<br>                    var input = document.createElement('input');<br>                    input.type = "text";<br>                    input.value = td.innerText;<br>                    td.innerHTML = "";<br>                    td.appendChild(input);<br>                    input.focus();<br>                    input.onblur = function () {<br>                        td.removeChild(input);<br>                        td.innerHTML = input.value;<br>                        myArray[rid] = input.value;<br>                        row.style.backgroundColor = "White"<br>                    }<br>                })<br>            }<br>            console.log(dad);<br>        }<br>    &lt;/script&gt;<br>&lt;/body&gt;</p>
+
+<p>&lt;/html&gt;</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

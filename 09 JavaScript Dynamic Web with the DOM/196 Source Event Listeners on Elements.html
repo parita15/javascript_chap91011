@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>196 Source Event Listeners on Elements</title>
+</head>
+<body>
+<div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <p>&lt;html&gt;</p>
+
+<p>&lt;head&gt;<br>    &lt;title&gt;Complete JavaScript Course&lt;/title&gt;<br>    &lt;style&gt;</p>
+
+<p>    &lt;/style&gt;<br>&lt;/head&gt;</p>
+
+<p>&lt;body&gt;<br>    &lt;div id="message"&gt;Complete JavaScript Course&lt;/div&gt;<br>    &lt;div id="wrapper"&gt;Page 1&lt;/div&gt; &lt;img id="imgSwap"&gt;<br>    &lt;script&gt;<br>        var i = document.getElementById('imgSwap');<br>        var imgHolder = "**********/350x150/ffff00/fff?text=Image10";<br>        var t;<br>        window.onload = function () {<br>            i.src = imgHolder;<br>        }<br>        i.addEventListener('click', function () {<br>            console.log(event);<br>            message("clicked");<br>        })<br>        i.addEventListener('mouseover', function () {<br>            t = this.src;<br>            this.src = "**********/350x150/ff0000/fff?text=Image2";<br>            message("Over");<br>        })<br>        i.addEventListener('mouseout', function () {<br>            this.src = t;<br>            message("Out");a<br>        })</p>
+
+<p>        function cImg(t) {<br>            message(t.src);<br>            imgHolder = t.src;<br>    <br>            t.src = "**********/350x150/ff0000/fff?text=Image2";<br>        }</p>
+
+<p>        function bImg(t) {<br>            t.src = imgHolder;<br>        }</p>
+
+<p>        function message(m) {<br>            document.getElementById('wrapper').innerHTML = m;<br>        }<br>    &lt;/script&gt;<br>&lt;/body&gt;</p>
+
+<p>&lt;/html&gt;</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

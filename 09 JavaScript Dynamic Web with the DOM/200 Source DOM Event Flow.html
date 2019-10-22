@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>200 Source DOM Event Flow</title>
+</head>
+<body>
+<div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <p>&lt;html&gt;</p>
+
+<p>&lt;head&gt;<br>    &lt;title&gt;Complete JavaScript Course&lt;/title&gt;<br>    &lt;style&gt;<br>        div {<br>            border: 1px solid black;<br>        }<br>    &lt;/style&gt;<br>&lt;/head&gt;</p>
+
+<p>&lt;body&gt;<br>    &lt;div id="message"&gt;Complete JavaScript Course&lt;/div&gt;<br>    &lt;div id="output"&gt;1<br>        &lt;div&gt;2<br>            &lt;div&gt;3<br>                &lt;div&gt;4<br>                    &lt;div&gt;5 &lt;/div&gt;<br>                &lt;/div&gt;<br>            &lt;/div&gt;<br>        &lt;/div&gt;<br>    &lt;/div&gt;<br>    &lt;script&gt;<br>        function bup() {<br>            console.log(this.innerText);<br>        }<br>        var d = document.getElementsByTagName('div');<br>        for (var x = 0; x &lt; d.length; x++) {<br>            d[x].addEventListener('click', bup, true);<br>        }<br>    &lt;/script&gt;<br>&lt;/body&gt;</p>
+
+<p>&lt;/html&gt;</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

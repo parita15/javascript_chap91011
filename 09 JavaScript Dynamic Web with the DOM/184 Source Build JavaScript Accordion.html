@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>184 Source Build JavaScript Accordion</title>
+</head>
+<body>
+<div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <p><br>&lt;html&gt;</p>
+
+<p>&lt;head&gt;<br>    &lt;title&gt;Complete JavaScript Course&lt;/title&gt;<br>    &lt;style&gt;<br>        .con {<br>            border: 1px solid black;<br>            padding: 20px;<br>            font-size: 0.8em;<br>            display: none;<br>        }<br>        <br>        .acc {<br>            font-size: 1.5em;<br>            background-color: #ddd;<br>        }<br>        <br>        .active {<br>            display: block;<br>        }<br>    &lt;/style&gt;<br>&lt;/head&gt;</p>
+
+<p>&lt;body&gt;<br>    &lt;div class="acc"&gt;Information about JavaScript&lt;/div&gt;<br>    &lt;div class="con"&gt;Complete JavaScript Course Complete JavaScript Course Complete JavaScript Course &lt;/div&gt;<br>    &lt;div class="acc"&gt;More Read JavaScript&lt;/div&gt;<br>    &lt;div class="con"&gt;Blah blah blah blah e&lt;/div&gt;<br>    &lt;div class="acc"&gt;More Read JavaScript&lt;/div&gt;<br>    &lt;div class="con"&gt;Blah blah blah blah e &lt;/div&gt;<br>    &lt;div class="acc"&gt;More Read JavaScript&lt;/div&gt;<br>    &lt;div class="con"&gt;Blah blah blah blah e &lt;/div&gt;<br>    &lt;div class="acc"&gt;More Read JavaScript&lt;/div&gt;<br>    &lt;div class="con"&gt;Blah blah blah blah e &lt;/div&gt;<br>    &lt;script&gt;<br>        var aTitle = document.querySelectorAll('.acc');<br>        var c = document.querySelectorAll('.con');<br>        for (var x = 0; x &lt; aTitle.length; x++) {<br>            aTitle[x].onclick = function () {<br>                cCon(this.nextElementSibling);<br>                this.nextElementSibling.classList.toggle('active');<br>            }<br>        }</p>
+
+<p>        function cCon(t) {<br>            for (var x = 0; x &lt; c.length; x++) {<br>                if (t != c[x]) {<br>                    c[x].classList.remove('active');<br>                }<br>            }<br>        }<br>    &lt;/script&gt;<br>&lt;/body&gt;</p>
+
+<p>&lt;/html&gt;</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

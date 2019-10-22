@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>182 Source Adding and Removing Classes</title>
+</head>
+<body>
+<div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <p>&lt;html&gt;</p>
+
+<p>&lt;head&gt;<br>    &lt;title&gt;Complete JavaScript Course&lt;/title&gt;<br>    &lt;style&gt;<br>        .box1 {<br>            background-color: aqua;<br>            font-size: 1.5em;<br>            color: #fff;<br>        }<br>        <br>        .box2 {<br>            background-color: red;<br>            font-size: 0.5em;<br>            color: #ddd;<br>        }<br>        <br>        #one,<br>        #two,<br>        #three {<br>            width: 100px;<br>            height: 100px;<br>            display: inline-block;<br>            border: 1px solid black;<br>        }<br>        <br>        .active {<br>            background-color: yellow;<br>        }<br>    &lt;/style&gt;<br>&lt;/head&gt;</p>
+
+<p>&lt;body&gt;<br>    &lt;div id="one" class="myClass"&gt;Box One&lt;/div&gt;<br>    &lt;div id="two" class="myClass active"&gt;Box Two&lt;/div&gt;<br>    &lt;div id="three" class="myClass"&gt;Box Three&lt;/div&gt;<br>    &lt;script&gt;<br>        var el = document.querySelectorAll('.myClass');<br>        for (var x = 0; x &lt; el.length; x++) {<br>            el[x].onclick = function () {<br>                upClass(el, 'active', 'remove');<br>                if (!this.classList.contains('active')) {<br>                    this.classList.add('active');<br>                }<br>                //this.classList.toggle('box1');<br>            }<br>        }</p>
+
+<p>        function upClass(e, c, a) {<br>            for (var x = 0; x &lt; e.length; x++) {<br>                e[x].classList[a](c);<br>            }<br>        }<br>    &lt;/script&gt;<br>&lt;/body&gt;</p>
+
+<p>&lt;/html&gt;</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

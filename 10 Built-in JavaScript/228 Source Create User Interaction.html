@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>228 Source Create User Interaction</title>
+</head>
+<body>
+<div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <p>&lt;html&gt;</p>
+
+<p>&lt;head&gt;<br>    &lt;title&gt;Complete JavaScript Course&lt;/title&gt;<br>    &lt;style&gt;<br>        #output {<br>            width: 400px;<br>            height: 400px;<br>            display: block;<br>            border: 1px solid black;<br>        }<br>        <br>        #cButtons &gt; div {<br>            width: 100px;<br>            display: inline-block;<br>            height: 50px;<br>            text-align: center;<br>            border: 1px solid black;<br>        }<br>    &lt;/style&gt;<br>&lt;/head&gt;</p>
+
+<p>&lt;body&gt;<br>    &lt;div id="message"&gt;Complete JavaScript Course&lt;/div&gt;<br>    &lt;input type="button" value="start" onclick="start()"&gt;<br>    &lt;div id="output"&gt;&lt;/div&gt;<br>    &lt;div id="cButtons"&gt; &lt;/div&gt;<br>    &lt;div id="guess"&gt;&lt;/div&gt;<br>    &lt;script&gt;<br>        var arr1 = [];<br>        var arr2 = [];<br>        var myT;<br>        var loop = 0;<br>        var output = document.getElementById('output');<br>        var message = document.getElementById('message');</p>
+
+<p>        function start() {<br>            var colorArr = ["red", "green", "blue", "yellow"];<br>            var html = "";<br>            for (var x = 0; x &lt; colorArr.length; x++) {<br>                html += '&lt;div class="' + colorArr[x] + '" style="background-color:' + colorArr[x] + '" onclick="oGuess()"&gt;' + colorArr[x] + '&lt;/div&gt;';<br>            }<br>            document.getElementById('cButtons').innerHTML = html;<br>            for (var x = 0; x &lt; 4; x++) {<br>                var r = colorArr[Math.floor(Math.random() * colorArr.length)];<br>                arr1.push(r);<br>            }<br>            loop = 0;<br>            console.log(loop)<br>            myT = setTimeout(goWhite, 200);<br>        }</p>
+
+<p>        function oGuess() {<br>            var g = event.target.className;<br>            arr2.push(g);<br>            if (arr2.length == arr1.length) {<br>                if (arr1.toString() == arr2.toString()) {<br>                    message.innerText = "you were correct :)";<br>                }<br>                else {<br>                    message.innerHTML = "you were wrong &lt;br&gt; Your guess " + arr2 + "&lt;br&gt;correct order was " + arr1;<br>                }<br>            }<br>        }</p>
+
+<p>        function goWhite() {<br>            output.style.backgroundColor = "white";<br>            myT = setTimeout(goColor, 200);<br>        }</p>
+
+<p>        function goColor() {<br>            output.style.backgroundColor = arr1[loop];<br>            loop++;<br>            if (loop &gt;= arr1.length) {<br>                clearTimeout(myT);<br>            }<br>            myT = setTimeout(goWhite, 1000);<br>        }<br>    &lt;/script&gt;<br>&lt;/body&gt;</p>
+
+<p>&lt;/html&gt;</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

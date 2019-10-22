@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>174 Source QuerySelector Element Selection</title>
+</head>
+<body>
+<div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <p>&lt;html&gt;</p>
+
+<p>&lt;head&gt;<br>    &lt;style&gt;<br>        #pickme .output {<br>            background-color: aqua;<br>        }<br>        <br>        input[name="last"] {<br>            background-color: red;<br>        }<br>    &lt;/style&gt;<br>&lt;/head&gt;</p>
+
+<p>&lt;body&gt;<br>    &lt;div id="message"&gt;Message 1&lt;/div&gt;<br>    &lt;div id="message1"&gt;Message 2&lt;/div&gt;<br>    &lt;div class="output"&gt;Test Me 1&lt;/div&gt;<br>    &lt;div class="output"&gt;Test Me 2&lt;/div&gt;<br>    &lt;div id="pickme"&gt;<br>        &lt;div class="output highlight"&gt;Test Me 3&lt;/div&gt;<br>    &lt;/div&gt;<br>    &lt;input type="text" name="first"&gt;<br>    &lt;input type="text" name="last"&gt;<br>    &lt;div class="output"&gt;Test Me 4&lt;/div&gt;<br>    &lt;div class="output"&gt;Test Me 5&lt;/div&gt;<br>    &lt;div class="output"&gt;Test Me 6&lt;/div&gt;<br>    &lt;div class="output highlight"&gt;Test Me 7&lt;/div&gt;<br>    &lt;div class="output"&gt;Test Me 8&lt;/div&gt;<br>    &lt;div class="output"&gt;Test Me 9&lt;/div&gt;<br>    &lt;div class="output"&gt;Test Me 10&lt;/div&gt;<br>    &lt;script&gt;<br>        var message = document.getElementById('message');<br>        var message1 = document.getElementById('message1');<br>        var el = document.querySelector('input[name="last"]');<br>        el.value = "It worked";<br>    &lt;/script&gt;<br>&lt;/body&gt;</p>
+
+<p>&lt;/html&gt;</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

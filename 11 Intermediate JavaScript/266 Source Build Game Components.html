@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>266 Source Build Game Components</title>
+</head>
+<body>
+<div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <p>&lt;html&gt;</p>
+
+<p>&lt;head&gt;<br>    &lt;title&gt;Complete JavaScript Course&lt;/title&gt;<br>    &lt;style&gt;<br>        .btn {<br>            background-color: red;<br>            text-align: center;<br>            border-radius: 10px;<br>            font-size: 1em;<br>            padding: 15px;<br>            color: white;<br>        }<br>        <br>        .btn:hover {<br>            background-color: crimson;<br>        }<br>        <br>        .gameTile {<br>            display: inline-block;<br>            padding: 3px;<br>        }<br>        <br>        .flipImage {<br>            max-width: 150px;<br>        }<br>    &lt;/style&gt;<br>&lt;/head&gt;</p>
+
+<p>&lt;body&gt;<br>    &lt;div id="output"&gt;Complete JavaScript Course &lt;/div&gt;<br>    &lt;div id="wrapper"&gt;<br>        &lt;div id="start" class="btn"&gt;Start&lt;/div&gt;<br>        &lt;div id="score"&gt;&lt;/div&gt;<br>        &lt;div id="message"&gt;&lt;/div&gt;<br>        &lt;div id="gameboard"&gt;&lt;/div&gt;<br>    &lt;/div&gt;<br>    &lt;script&gt;<br>        var playLockout = false;<br>        var gamePlay = false;<br>        var tileImages = []<br>            , tileArray = []<br>            , tileFlippedOver = [];<br>        var sb = document.getElementById('start');<br>        var message = document.getElementById('message');<br>        var score = document.getElementById('score');<br>        var gameBoard = document.getElementById('gameboard');<br>        sb.addEventListener('click', startGame);</p>
+
+<p>        function startGame() {<br>            // hide start button<br>            sb.style.display = 'none';<br>            message.innerHTML = "Its working" + gamePlay;<br>            if (!gamePlay) {<br>                gamePlay = true;<br>                buildArray();<br>                tileArray = tileImages.concat(tileImages);<br>                shuffleArray(tileArray);<br>                buildBoard();<br>            }<br>        }</p>
+
+<p>        function buildBoard() {<br>            var html = "";<br>            var x = 0;<br>            tileArray.forEach(function (ele) {<br>                x++;<br>                html += '&lt;div class="gameTile"&gt;';<br>                html += '&lt;img id="cardz' + x + '" src="http://via.placeholder.com/250/000000/ffffff?text=click" onclick="pickCard(' + x + ',this)" class="flipImage"&gt;&lt;/div&gt;';<br>            });<br>            gameBoard.innerHTML = html;<br>        }</p>
+
+<p>        function buildArray() {<br>            for (var x = 1; x &lt; 7; x++) {<br>                tileImages.push(x + '.jpg');<br>            }<br>        }</p>
+
+<p>        function shuffleArray(array) {<br>            for (var x = array.length - 1; x &gt; 0; x--) {<br>                var holder = Math.floor(Math.random() * (x + 1));<br>                var itemValue = array[x];<br>                array[x] = array[holder];<br>                array[holder] = itemValue;<br>            }<br>            return array;<br>        }<br>    &lt;/script&gt;<br>&lt;/body&gt;</p>
+
+<p>&lt;/html&gt;</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

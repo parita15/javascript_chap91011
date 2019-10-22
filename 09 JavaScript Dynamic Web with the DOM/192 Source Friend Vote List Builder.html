@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>192 Source Friend Vote List Builder</title>
+</head>
+<body>
+<div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <p>&lt;html&gt;</p>
+
+<p>&lt;head&gt;<br>    &lt;title&gt;Complete JavaScript Course&lt;/title&gt;<br>    &lt;style&gt;<br>        td {<br>            border: 1px solid #ddd;<br>            padding: 10px;<br>        }<br>    &lt;/style&gt;<br>&lt;/head&gt;</p>
+
+<p>&lt;body&gt;<br>    &lt;div id="message"&gt;Complete JavaScript Course&lt;/div&gt;<br>    &lt;div&gt;<br>        &lt;input type="text" id="addFriend"&gt;<br>        &lt;input type="button" id="addNew" value="Add Friend"&gt; &lt;/div&gt;<br>    &lt;div id="output"&gt;&lt;/div&gt;<br>    &lt;script&gt;<br>        window.onload = build;<br>        var myArray = ["Laurence", "Mike", "John", "Larry"];<br>        var message = document.getElementById('message');<br>        var addNew = document.getElementById('addNew');<br>        addNew.onclick = function () {<br>            var q = document.getElementById('addFriend').value;<br>            var tr = document.createElement('tr');<br>            tr.setAttribute('data-row', myArray.length);<br>            tr.setAttribute('data-vote', 0);<br>            tr.innerHTML = '&lt;td class="box"&gt;' + (myArray.length + 1) + '&lt;/td&gt;&lt;td&gt;' + q + '&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;';<br>            var container = document.querySelector('#output table tbody');<br>            container.appendChild(tr);<br>            myArray.push(q);<br>            voteCount();<br>        }</p>
+
+<p>        function build() {<br>            var html = "&lt;h1&gt;My Friends Table&lt;/h1&gt;&lt;table&gt;";<br>            for (var x = 0; x &lt; myArray.length; x++) {<br>                html += '&lt;tr data-row="' + x + '" data-vote="0"&gt;&lt;td class="box" &gt;' + (x + 1) + '&lt;/td&gt;&lt;td&gt;' + myArray[x] + '&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;&lt;/tr&gt;';<br>            }<br>            html += '&lt;/table&gt;';<br>            document.getElementById('output').innerHTML = html;<br>            voteCount();<br>        }</p>
+
+<p>        function voteCount() {<br>            var elbox = document.querySelectorAll('#output .box');<br>            var a;<br>            var v;<br>            for (var x = 0; x &lt; elbox.length; x++) {<br>                elbox[x].onclick = function () {<br>                    a = this.closest('[data-row]').getAttribute('data-row');<br>                    message.innerHTML = myArray[a] + " is on row #" + a;<br>                    v = this.closest('[data-vote]').getAttribute('data-vote');<br>                    v++;<br>                    this.parentElement.lastElementChild.innerText = v;<br>                    this.parentElement.setAttribute("data-vote", v);<br>                }<br>            }<br>        }<br>    &lt;/script&gt;<br>&lt;/body&gt;</p>
+
+<p>&lt;/html&gt;</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>234 Source Hit a Computer Game</title>
+</head>
+<body>
+<div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <p>&lt;html&gt;</p>
+
+<p>&lt;head&gt;<br>    &lt;title&gt;Complete JavaScript Course&lt;/title&gt;<br>    &lt;style&gt;<br>        .gameboard {<br>            width:600px;<br>            height:500px;<br>            margin: 0 auto;<br>            border:1px solid #ddd;<br>        }<br>        .office {<br>            float:left;<br>            width:120px;<br>            height:170px;<br>            overflow: hidden;<br>            position: relative;<br>            border:1px solid #ddd;<br>            margin:10px 30px;<br>        }<br>        <br>        <br>        .desk{<br>            width:100%;<br>            height:50px;<br>            bottom: 0px;<br>            position: absolute;<br>            background-color: burlywood;<br>            z-index:2;<br>        }<br>        <br>        .computer {<br>            background: url('comp.JPG') bottom center no-repeat;<br>            background-size: 100% 100%;<br>            position:absolute;<br>            top:100%;<br>            width:100%;<br>            height:80%;<br>            <br>        }<br>        <br>        .popup{<br>            top:0;<br>        }<br>    &lt;/style&gt;<br>&lt;/head&gt;</p>
+
+<p>&lt;body&gt;Score:&lt;span class="score"&gt;0&lt;/span&gt;<br>    &lt;input type="button" onclick="start()" value="Start Game"&gt;<br>    &lt;div class="gameboard"&gt;&lt;/div&gt;</p>
+
+<p>    &lt;script&gt;<br>        window.onload = build;<br>        var computer;<br>        var offices =  6;<br>        function build(){<br>            var html = "&lt;h1&gt;Hit the computer&lt;/h1&gt;";<br>            for(var x=0;x&lt;offices;x++){<br>                html += '&lt;div class="office"&gt;&lt;div class="desk"&gt;&lt;/div&gt;&lt;div class="computer"&gt;&lt;/div&gt;&lt;/div&gt;';<br>            }<br>            document.querySelector('.gameboard').innerHTML = html;<br>            computer=document.querySelectorAll('.computer');<br>            for(var x=0;x&lt;computer.length;x++){<br>                computer[x].addEventListener('click',hitcomputer,false);<br>            }<br>        }<br>        <br>        function popup(){<br>            var ranCom = computer[];<br>        }<br>        <br>        <br>        function hitcomputer(){<br>            <br>        }<br>        <br>        function start(){<br>            popup();<br>        }<br>        <br>        <br>        <br>        <br>        <br>        <br>        <br>        <br>        <br>        <br>        <br>        <br>        <br>        <br>        <br>    &lt;/script&gt;<br>&lt;/body&gt;</p>
+
+<p>&lt;/html&gt;</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

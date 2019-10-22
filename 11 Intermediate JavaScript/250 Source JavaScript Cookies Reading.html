@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>250 Source JavaScript Cookies Reading</title>
+</head>
+<body>
+<div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <p>https://www.apachefriends.org/index.html</p>
+
+<p>&lt;html&gt;</p>
+
+<p>&lt;head&gt;<br>    &lt;title&gt;Complete JavaScript Course&lt;/title&gt;<br>    &lt;style&gt;</p>
+
+<p>    &lt;/style&gt;<br>&lt;/head&gt;</p>
+
+<p>&lt;body&gt;<br>    &lt;div id="output"&gt;Complete JavaScript Course &lt;/div&gt;<br>    &lt;script&gt;<br>        function cCookie(name, value, days) {<br>            var e = "";<br>            if (days) {<br>                var d = new Date();<br>                d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));<br>                e = "; expires=" + d.toUTCString();<br>            }<br>            document.cookie = name + "=" + value + e + "; path=/";<br>        }</p>
+
+<p>        function rCookie(name) {<br>            var p = name + "=";<br>            var c = document.cookie.split(';');<br>            for (var x = 0; x &lt; c.length; x++) {<br>                //var t = c[x].charAt(0) == ' ' ? c[x].substring(1)   : c[x];<br>                // var t = c[x].trim();<br>                var t = c[x].replace(/^\s+|\s+$/gm, '');<br>                if (t.indexOf(p) == 0) {<br>                    return t.substring(p.length, t.length);<br>                }<br>            }<br>            return "";<br>        }</p>
+
+<p>        function dCookie(name) {<br>            cCookie(name, "", -1);<br>        }<br>        var myCookie = rCookie('test');<br>    &lt;/script&gt;<br>&lt;/body&gt;</p>
+
+<p>&lt;/html&gt;</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

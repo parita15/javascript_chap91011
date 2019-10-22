@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>172 Source Elements Click Handler</title>
+</head>
+<body>
+<div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <p>&lt;html&gt;</p>
+
+<p>&lt;head&gt;<br>    &lt;style&gt;</p>
+
+<p>    &lt;/style&gt;<br>&lt;/head&gt;</p>
+
+<p>&lt;body&gt;<br>    &lt;div id="message"&gt;Message 1&lt;/div&gt;<br>    &lt;div id="message1"&gt;Message 2&lt;/div&gt;<br>    &lt;div class="output"&gt;Test Me 1&lt;/div&gt;<br>    &lt;div class="output"&gt;Test Me 2&lt;/div&gt;<br>    &lt;div class="output highlight"&gt;Test Me 3&lt;/div&gt;<br>    &lt;div class="output"&gt;Test Me 4&lt;/div&gt;<br>    &lt;div class="output"&gt;Test Me 5&lt;/div&gt;<br>    &lt;div class="output"&gt;Test Me 6&lt;/div&gt;<br>    &lt;div class="output highlight"&gt;Test Me 7&lt;/div&gt;<br>    &lt;div class="output"&gt;Test Me 8&lt;/div&gt;<br>    &lt;div class="output"&gt;Test Me 9&lt;/div&gt;<br>    &lt;div class="output"&gt;Test Me 10&lt;/div&gt;<br>    &lt;script&gt;<br>        var elClass = document.getElementsByClassName('output');<br>        var highClass = document.getElementsByClassName('highlight');<br>        var message = document.getElementById('message');<br>        var message1 = document.getElementById('message1');<br>        for (var x = 0; x &lt; elClass.length; x++) {<br>            elClass[x].onclick = function () {<br>                message.innerHTML = event.target.innerHTML;<br>            }<br>        }<br>        for (var x = 0; x &lt; highClass.length; x++) {<br>            highClass[x].onclick = function () {<br>                message1.innerHTML = "CLICKED highlighted";<br>            }<br>        }<br>    &lt;/script&gt;<br>&lt;/body&gt;</p>
+
+<p>&lt;/html&gt;</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

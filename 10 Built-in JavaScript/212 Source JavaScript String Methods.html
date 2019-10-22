@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>212 Source JavaScript String Methods</title>
+</head>
+<body>
+<div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <p>&lt;html&gt;</p>
+
+<p>&lt;head&gt;<br>    &lt;title&gt;Complete JavaScript Course&lt;/title&gt;<br>    &lt;style&gt;</p>
+
+<p>    &lt;/style&gt;<br>&lt;/head&gt;</p>
+
+<p>&lt;body&gt;<br>    &lt;div id="message"&gt;Complete JavaScript Course&lt;/div&gt;<br>    &lt;input type="text" id="myString"&gt;<br>    &lt;input type="number" id="guess"&gt;<br>    &lt;input type="button" value="Guess" onclick="checkGuess()"&gt;<br>    &lt;script&gt;<br>        // input for string<br>        // input to guess the length of the string<br>        // button to trigger function<br>        // check if the guess is correct <br>        var a = "world hello";<br>        var b = new String("Hello World");<br>        var message = document.getElementById('message');</p>
+
+<p>        function checkGuess() {<br>            var myString = document.getElementById('myString').value;<br>            var myGuess = document.getElementById('guess').value;<br>            if (myString.length == myGuess) {<br>                message.innerHTML = "Correct it was " + myString.length;<br>            }<br>            else {<br>                message.innerHTML = "WRONG it was  " + myString.length;<br>            }<br>        }<br>    &lt;/script&gt;<br>&lt;/body&gt;</p>
+
+<p>&lt;/html&gt;</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

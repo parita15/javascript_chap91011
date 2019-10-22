@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>256 Source Function Recursion</title>
+</head>
+<body>
+<div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <p>&lt;html&gt;</p>
+
+<p>&lt;head&gt;<br>    &lt;title&gt;Complete JavaScript Course&lt;/title&gt;<br>    &lt;style&gt;<br>        .box {<br>            width: 100px;<br>            height: 100px;<br>            border: 1px solid black;<br>            display: inline-block;<br>        }<br>    &lt;/style&gt;<br>&lt;/head&gt;</p>
+
+<p>&lt;body&gt;<br>    &lt;div id="output"&gt;Complete JavaScript Course &lt;/div&gt;<br>    &lt;div id="test"&gt;<br>        &lt;div&gt;First&lt;/div&gt;<br>        &lt;div&gt;Second&lt;/div&gt;<br>        &lt;div&gt;Three<br>            &lt;div&gt;Four<br>                &lt;div&gt;Five&lt;/div&gt;<br>                &lt;div&gt;Five&lt;/div&gt;<br>                &lt;div&gt;Five&lt;/div&gt;<br>                &lt;div&gt;Five&lt;/div&gt;<br>                &lt;div&gt;Five&lt;/div&gt;<br>                &lt;div&gt;Five&lt;/div&gt;<br>            &lt;/div&gt;<br>        &lt;/div&gt;<br>    &lt;/div&gt;<br>    &lt;script&gt;<br>        cUp();</p>
+
+<p>        function cUp() {<br>            var test = document.getElementById('test');<br>            cNode(test);<br>        }</p>
+
+<p>        function cNode(data) {<br>            for (var x = 0; x &lt; data.children.length; x++) {<br>                var c = data.children[x];<br>                sNode(c);<br>                cNode(c);<br>            }<br>        }</p>
+
+<p>        function sNode(data) {<br>            var bgColor = '#' + Math.random().toString(16).substr(-6);<br>            console.log(bgColor);<br>            data.style.backgroundColor = bgColor;<br>            data.classList.add('box');<br>        }<br>    &lt;/script&gt;<br>&lt;/body&gt;</p>
+
+<p>&lt;/html&gt;</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

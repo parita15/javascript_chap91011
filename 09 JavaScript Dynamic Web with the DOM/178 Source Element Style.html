@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>178 Source Element Style</title>
+</head>
+<body>
+<div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <p>var message = document.getElementById('message');<br>message.style.display = "none"<br>message.style.display = "block"<br>message.style.color = "red"<br>message.style.borderBottomColor = "blue"<br>message.style.border = "1px solid"<br>message.style.backgroundColor = "yellow"</p>
+
+
+
+<p>&lt;html&gt;</p>
+
+<p>&lt;head&gt;<br>    &lt;style&gt;</p>
+
+<p>    &lt;/style&gt;<br>&lt;/head&gt;</p>
+
+<p>&lt;body onload="start()"&gt;<br>    &lt;div id="message"&gt;Message 1&lt;/div&gt;<br>    &lt;div class="output"&gt;Test Me 1&lt;/div&gt;<br>    &lt;div class="output"&gt;Test Me 2&lt;/div&gt;<br>    &lt;div id="pickme1"&gt;<br>        &lt;div class="output highlight"&gt;Test Me 3&lt;/div&gt;<br>    &lt;/div&gt;<br>    &lt;input type="text" name="queryStuff" id="queryStuff"&gt;<br>    &lt;input type="button" onclick="mySel()" value="Get Query"&gt;<br>    &lt;div id="pickme2"&gt;<br>        &lt;div class="output"&gt;Test Me 4&lt;/div&gt;<br>        &lt;div class="output"&gt;Test Me 5&lt;/div&gt;<br>        &lt;div class="output"&gt;Test Me 6&lt;/div&gt;<br>    &lt;/div&gt;<br>    &lt;div class="output highlight"&gt;Test Me 7&lt;/div&gt;<br>    &lt;div class="output"&gt;Test Me 8&lt;/div&gt;<br>    &lt;div class="output"&gt;Test Me 9&lt;/div&gt;<br>    &lt;div class="output"&gt;Test Me 10&lt;/div&gt;<br>    &lt;script&gt;<br>        var bgColor = ["red", "blue", "green", "yellow", "pink", "purple"];<br>        var message = document.getElementById('message');<br>        var c;<br>        var el = document.querySelectorAll('.output');</p>
+
+<p>        function start() {<br>            setInterval(swapBg, 2000);<br>        }</p>
+
+<p>        function swapBg() {<br>            for (var x = 0; x &lt; el.length; x++) {<br>                c = bgColor[Math.floor(Math.random() * bgColor.length)];<br>                el[x].style.backgroundColor = c;<br>            }<br>        }<br>    &lt;/script&gt;<br>&lt;/body&gt;</p>
+
+<p>&lt;/html&gt;</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

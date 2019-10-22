@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>243 Source Find and Replace RegEx object</title>
+</head>
+<body>
+<div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <p>&lt;html&gt;</p>
+
+<p>&lt;head&gt;<br>    &lt;title&gt;Complete JavaScript Course&lt;/title&gt;<br>    &lt;style&gt;</p>
+
+<p>    &lt;/style&gt;<br>&lt;/head&gt;</p>
+
+<p>&lt;body&gt;<br>    &lt;div id="output"&gt;Complete JavaScript Course Complete JavaScript Course Complete JavaScript Course Complete JavaScript Course Complete JavaScript Course&lt;/div&gt; Search for :<br>    &lt;input id="sText" type="text"&gt;<br>    &lt;br&gt; Replace with :<br>    &lt;input id="rText" type="text"&gt;<br>    &lt;br&gt;<br>    &lt;input type="button" onclick="lookUp()" value="find text"&gt;<br>    &lt;script&gt;<br>        function lookUp() {<br>            var s = document.getElementById('output').innerText;<br>            var st = document.getElementById('sText').value;<br>            var rt = document.getElementById('rText').value;<br>            var re = new RegExp(st, "gi");<br>            var result = s.match(re);<br>            if (result) {<br>                var rr = s.replace(re, rt);<br>                document.getElementById('output').innerText = rr;<br>            }<br>            console.log(result);<br>        }<br>    &lt;/script&gt;<br>&lt;/body&gt;</p>
+
+<p>&lt;/html&gt;</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

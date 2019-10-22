@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>241 Source Code RegEx</title>
+</head>
+<body>
+<div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <p>&lt;html&gt;</p>
+
+<p>&lt;head&gt;<br>    &lt;title&gt;Complete JavaScript Course&lt;/title&gt;<br>    &lt;style&gt;</p>
+
+
+
+<p>    &lt;/style&gt;<br>&lt;/head&gt;</p>
+
+
+
+<p>&lt;body&gt;<br>    &lt;div id="output"&gt;Complete JavaScript Course&lt;/div&gt;<br>    &lt;input type="button" onclick="myFun()" value="Click"&gt;<br>    &lt;script&gt;<br>        var output = document.getElementById('output');<br>        var str = "abasdn skjkj eqwj k JavaScript adsjkj asllk 123432 43453 321 3 34 javascript 432 432 JavaScript 342 JavaScript4121";</p>
+
+
+
+<p>        function myFun() {<br>            var p = /javaScript/ig;<br>            var r = str.match(p);<br>            r.forEach(function (e) {<br>                console.log(e);<br>            })<br>        }<br>    &lt;/script&gt;<br>&lt;/body&gt;</p>
+
+
+
+<p>&lt;/html&gt;</p>
+
+<p><br></p>
+
+<p>&lt;html&gt;</p>
+
+
+
+<p>&lt;head&gt;<br>    &lt;title&gt;Complete JavaScript Course&lt;/title&gt;<br>    &lt;style&gt;</p>
+
+
+
+<p>    &lt;/style&gt;<br>&lt;/head&gt;</p>
+
+
+
+<p>&lt;body&gt;<br>    &lt;div id="output"&gt;Complete JavaScript Course&lt;/div&gt;</p>
+
+
+
+<p>    &lt;input type="text" id="email" value="email@gmail.com"&gt;<br>    &lt;input type="text" id="num" value="123321"&gt;<br>    &lt;input type="text" id="cha" value="characters"&gt;<br>    &lt;input type="button" onclick="myFun()" value="Validate Inputs"&gt;<br>    &lt;script&gt;</p>
+
+
+
+<p>        // number input only digits<br>        // email input<br>        // text input only char<br>        // all need to have content<br>        <br>        <br>        <br>        var output = document.getElementById('output');<br>        var str = "abasdn skjkj eqwj k JavaScript adsjkj asllk 123432 43453 321 3 34 javascript 432 432 JavaScript 342 JavaScript4121";<br>        <br>        <br>        <br>        <br>        function myFun(){<br>            e = document.getElementById('email').value;<br>            var p = /([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z.]+)/ig;<br>            var r = e.match(p);<br>            var t = r == null ? false : true;<br>            console.log(t);<br>            return t;<br>     }<br>        <br>        <br>        <br>        <br>        <br>        <br>        <br>        <br>        <br>        <br>        <br>        <br>        <br>        <br>    &lt;/script&gt;<br>&lt;/body&gt;</p>
+
+
+
+<p>&lt;/html&gt;</p>
+
+<p><br></p>
+
+<p><br></p>
+
+<p>&lt;html&gt;</p>
+
+
+
+<p>&lt;head&gt;<br>    &lt;title&gt;Complete JavaScript Course&lt;/title&gt;<br>    &lt;style&gt;</p>
+
+
+
+<p>    &lt;/style&gt;<br>&lt;/head&gt;</p>
+
+
+
+<p>&lt;body&gt;<br>    &lt;div id="output"&gt;Complete JavaScript Course&lt;/div&gt;</p>
+
+
+
+<p>    &lt;input type="text" id="email" value="email@gmail.com"&gt;<br>    &lt;input type="text" id="num" value="123321"&gt;<br>    &lt;input type="text" id="cha" value="characters"&gt;<br>    &lt;input type="button" onclick="myFun()" value="Validate Inputs"&gt;<br>    &lt;script&gt;</p>
+
+
+
+<p>        // number input only digits<br>        // email input<br>        // text input only char<br>        // all need to have content<br>        <br>        <br>        <br>        var output = document.getElementById('output');<br>        var str = "abasdn skjkj eqwj k JavaScript adsjkj asllk 123432 43453 321 3 34 javascript 432 432 JavaScript 342 JavaScript4121";<br>        <br>        <br>        <br>        <br>        function myFun(){<br>            e = document.getElementById('email').value;<br>            var p = /([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z.]+)/ig;<br>            var r = e.match(p);<br>            var t = r == null ? false : true;<br>            console.log(t);<br>            return t;<br>     }<br>        <br>        <br>        <br>        <br>        <br>        <br>        <br>        <br>        <br>        <br>        <br>        <br>        <br>        <br>    &lt;/script&gt;<br>&lt;/body&gt;</p>
+
+
+
+<p>&lt;/html&gt;</p>
+
+<p>&lt;html&gt;</p>
+
+<p>&lt;head&gt;<br>    &lt;title&gt;Complete JavaScript Course&lt;/title&gt;<br>    &lt;style&gt;</p>
+
+<p>    &lt;/style&gt;<br>&lt;/head&gt;</p>
+
+<p>&lt;body&gt;<br>    &lt;div id="output"&gt;Complete JavaScript Course&lt;/div&gt;<br>    &lt;input type="text" id="email" value="email@gmail.com"&gt;<br>    &lt;input type="text" id="num" value="123321"&gt;<br>    &lt;input type="text" id="cha" value="characters"&gt;<br>    &lt;input type="button" onclick="myFun()" value="Validate Inputs"&gt;<br>    &lt;script&gt;<br>        // number input only digits<br>        // email input<br>        // text input only char<br>        // all need to have content<br>        var output = document.getElementById('output');<br>        var str = "abasdn skjkj eqwj k JavaScript adsjkj asllk 123432 43453 321 3 34 javascript 432 432 JavaScript 342 JavaScript4121";</p>
+
+<p>        function cEmail(e) {<br>            var p = /([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z.]+)/ig;<br>            var r = e.match(p);<br>            return r == null ? false : true;<br>        }</p>
+
+<p>        function cNum(e) {<br>            var p = /\D/;<br>            var r = e.match(p);<br>            return r == null ? true : false;<br>        }</p>
+
+<p>        function cChar(e) {<br>            var p = /[^A-Za-z]/ig;<br>            var r = e.match(p);<br>            return r == null ? true : false;<br>        }</p>
+
+<p>        function myFun() {<br>            var i = document.getElementsByTagName('input');<br>            for (var x = 0; x &lt; i.length; x++) {<br>                //console.log(i[x]);<br>                if (i[x].value == "") {<br>                    console.log('No Value in ' + i[x].id);<br>                }<br>                if (i[x].type == "text") {<br>                    if (i[x].id == "email") {<br>                        if (cEmail(i[x].value)) {<br>                            console.log('Email Valid');<br>                        }<br>                        else {<br>                            console.log('Bad Email');<br>                        }<br>                    }<br>                    if (i[x].id == "num") {<br>                        if (cNum(i[x].value)) {<br>                            console.log('Num only Valid');<br>                        }<br>                        else {<br>                            console.log('Non Number in the string');<br>                        }<br>                    }<br>                    if (i[x].id == "cha") {<br>                        if (cChar(i[x].value)) {<br>                            console.log('Char only Valid');<br>                        }<br>                        else {<br>                            console.log('Non Char is in the string');<br>                        }<br>                    }<br>                }<br>            }<br>        }<br>    &lt;/script&gt;<br>&lt;/body&gt;</p>
+
+<p>&lt;/html&gt;</p><p><br></p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

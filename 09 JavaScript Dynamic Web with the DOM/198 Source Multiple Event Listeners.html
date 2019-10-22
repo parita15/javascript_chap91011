@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>198 Source Multiple Event Listeners</title>
+</head>
+<body>
+<div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <p>&lt;html&gt;</p>
+
+<p>&lt;head&gt;<br>    &lt;title&gt;Complete JavaScript Course&lt;/title&gt;<br>    &lt;style&gt;<br>        .holder {<br>            display: inline-block;<br>            width: 300px;<br>            height: 300px;<br>            border: 1px solid black;<br>            padding: 10px;<br>        }<br>        <br>        .active {<br>            background-color: red;<br>        }<br>    &lt;/style&gt;<br>&lt;/head&gt;</p>
+
+<p>&lt;body&gt;<br>    &lt;div id="message"&gt;Complete JavaScript Course&lt;/div&gt;<br>    &lt;div class="holder"&gt;<br>        &lt;div id="output"&gt;&lt;/div&gt;<br>    &lt;/div&gt;<br>    &lt;script&gt;<br>        var ele = document.querySelector('.holder');<br>        ele.addEventListener('mouseover', function () {<br>            this.classList.add('active');<br>        })<br>        ele.addEventListener('mouseout', function () {<br>            this.classList.remove('active');<br>        })<br>        ele.addEventListener('mousemove', coordin);</p>
+
+<p>        function coordin() {<br>            var html = "X:" + event.clientX + " | Y:" + event.clientY;<br>            document.getElementById('output').innerHTML = html;<br>        }<br>    &lt;/script&gt;<br>&lt;/body&gt;</p>
+
+<p>&lt;/html&gt;</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
